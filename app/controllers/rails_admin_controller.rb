@@ -1,0 +1,4 @@
+class RailsAdminController <  ApplicationController
+
+
+end

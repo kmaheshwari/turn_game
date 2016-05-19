@@ -12,11 +12,17 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
 gem "grape"
 gem 'grape-active_model_serializers'
 gem 'grape-swagger-rails'
 gem 'hashie-forbidden_attributes','~>0.1.1'
 gem 'rack-cors', :require => 'rack/cors'
+
+gem 'devise'
+
+gem 'rails_admin'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 

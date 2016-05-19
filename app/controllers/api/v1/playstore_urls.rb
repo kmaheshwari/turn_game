@@ -20,8 +20,8 @@ module API
     	  ## This takes care of parameter validation
     	  params do
     	    group :playstoreUrl, type: Hash do
-    	      optional :playstoreUrl_name, type: String
-    	      optional :playstore_url_id, type:Integer
+    	      optional :url, type: String
+    	      
     	    end  
     	  end
     	  ## This takes care of creating playstoreUrl
@@ -43,9 +43,7 @@ module API
     	  ## This takes care of parameter validation
     	  params do
     	    group :playstoreUrl, type: Hash do
-    	      optional :playstoreUrl_name, type: String
-    	      optional :playstore_url_id, type:Integer
-    	   
+    	      optional :url, type: String
     	    end  
     	  end
     	  ## This takes care of editing playstoreUrl

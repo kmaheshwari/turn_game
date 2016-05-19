@@ -20,8 +20,7 @@ module API
     	  ## This takes care of parameter validation
     	  params do
     	    group :category, type: Hash do
-    	      optional :category_name, type: String
-    	      optional :playstore_url_id, type:Integer
+    	      optional :name, type: String
     	    end  
     	  end
     	  ## This takes care of creating category
@@ -43,9 +42,7 @@ module API
     	  ## This takes care of parameter validation
     	  params do
     	    group :category, type: Hash do
-    	      optional :category_name, type: String
-    	      optional :playstore_url_id, type:Integer
-    	   
+    	      optional :name, type: String
     	    end  
     	  end
     	  ## This takes care of editing category

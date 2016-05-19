@@ -22,14 +22,14 @@ module API
     	    group :leaderboard, type: Hash do
     	      optional :leaderboard_name, type: String
     	      optional :game_id, type:Integer
-              optional :icon, type: String
-              optional :desc, type: String
-              optional :list_order, type:Integer
-              optional :limit, type: Boolean
-              optional :score_formatting, type: String
-              optional :type, type: String
-              optional :time_frame, type: String
-              optional :ordering, type: String
+            optional :icon, type: String
+            optional :desc, type: String
+            optional :list_order, type:Integer
+            optional :limit, type: Boolean
+            optional :score_formatting, type: String
+            optional :type, type: String
+            optional :time_frame, type: String
+            optional :ordering, type: String
     	    end  
     	  end
     	  ## This takes care of creating leaderboard

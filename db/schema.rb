@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519090817) do
+ActiveRecord::Schema.define(version: 20160519132446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,9 +49,8 @@ ActiveRecord::Schema.define(version: 20160519090817) do
 
   create_table "games", force: :cascade do |t|
     t.string   "game_name"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.integer  "playstore_url_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "leaderboards", force: :cascade do |t|
@@ -89,6 +88,7 @@ ActiveRecord::Schema.define(version: 20160519090817) do
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "game_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -103,5 +103,5 @@ ActiveRecord::Schema.define(version: 20160519090817) do
 
   add_foreign_key "game_categories", "categories"
   add_foreign_key "game_categories", "games"
-  add_foreign_key "games", "playstore_urls"
+  add_foreign_key "playstore_urls", "games"
 end

@@ -8,7 +8,27 @@ RailsAdmin.config do |config|
     end
     config.current_user_method(&:current_admin)
 
-    
+
+config.excluded_models = ["GameCategory","Admin","MultiplayerScore","MultiplayerStat","PlaystoreUrl"]
+
+config.model Category do
+  edit do
+    field :name
+  end
+end
+
+config.model Game do
+  edit do
+    field :game_name
+    field :playstore_url
+    field :categories, :enum do
+      enum do
+        Category.all.collect{|category| [category.name,category.id]}
+      end
+    end
+  end
+end
+
   ## == Cancan ==
   # config.authorize_with :cancan
 
